@@ -107,7 +107,7 @@ static const double kDefaultIntervalInSeconds = 1.0;
 /// 定时器的事件
 - (void)commentAnimation
 {
-    if (self.repeatCount <= 0) {
+    if (self.repeatCount <= 0 && !self.isMaxTimes) {
         [self killTimer];
     }else{
         self.repeatCount--;
