@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ELKGCDTimer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'ELKGCDTimer 是一个简单易用的GCD定时器'
 
 # This description is used to generate tags and improve search results.
