@@ -8,6 +8,9 @@
 
 #import "ELKGCDTimer.h"
 
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#endif
 
 static const double kDefaultIntervalInSeconds = 1.0;
 
@@ -21,6 +24,8 @@ static const double kDefaultIntervalInSeconds = 1.0;
 @property (nonatomic, assign) NSInteger repeatCount;
 /// 定时器指定间隔（单位：秒），默认为 1s
 @property (nonatomic, assign) NSTimeInterval timerInterval;
+/// 是否是无限次,如果是无限次,提醒用户手动销毁
+@property (nonatomic, assign) BOOL isMaxTimes;
 
 /// 定时器的回调
 @property (nonatomic, copy) ELKGCDTimerBlock elk_easyTimerBlock;
@@ -62,6 +67,7 @@ static const double kDefaultIntervalInSeconds = 1.0;
         });
     });
     GCDTimer.repeatCount = rpCount > 0 ? rpCount : MAXFLOAT;
+    GCDTimer.isMaxTimes = rpCount == 0 ? YES : NO;
     GCDTimer.elk_easyTimerBlock = easyBock;
     GCDTimer.isSuspend = YES;
     [GCDTimer starTimer];
@@ -95,6 +101,7 @@ static const double kDefaultIntervalInSeconds = 1.0;
         }
          dispatch_source_cancel(self.timer);
          self.timer = nil;
+        NSLog(@"GCD定时器已销毁/Timer has been destroyed");
      }
 }
 /// 定时器的事件
@@ -106,6 +113,12 @@ static const double kDefaultIntervalInSeconds = 1.0;
         self.repeatCount--;
         if (self.elk_easyTimerBlock) {
             self.elk_easyTimerBlock(self, self.repeatCount);
+            if (self.isMaxTimes) {
+                NSLog(@"当前定时器配置为无限次,请根据需求手动调用 - killTimer 方法销毁");
+            }else{
+                
+                NSLog(@"ELKGCDTImer - repeatCount: %ld",self.repeatCount);
+            }
         }
     }
 }
