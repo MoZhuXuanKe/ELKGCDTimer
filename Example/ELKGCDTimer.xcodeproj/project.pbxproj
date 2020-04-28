@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0702F976308EE5FF28D6DDF6 /* Pods-ELKGCDTimer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELKGCDTimer_Tests.release.xcconfig"; path = "Target Support Files/Pods-ELKGCDTimer_Tests/Pods-ELKGCDTimer_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		373DD8527AB89F25E630EA05 /* Pods_ELKGCDTimer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ELKGCDTimer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A39D6F78D370E4DAD17CCCD /* ELKGCDTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ELKGCDTimer.podspec; path = ../ELKGCDTimer.podspec; sourceTree = "<group>"; };
+		3A39D6F78D370E4DAD17CCCD /* ELKGCDTimer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ELKGCDTimer.podspec; path = ../ELKGCDTimer.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ELKGCDTimer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ELKGCDTimer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,8 +61,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ADDB0E7C408A27A426981DA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B5CBB7B31FD0A3D5C32A578C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		ADDB0E7C408A27A426981DA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B5CBB7B31FD0A3D5C32A578C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C0D2B7A6AF9010B43B613C5B /* Pods-ELKGCDTimer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELKGCDTimer_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ELKGCDTimer_Tests/Pods-ELKGCDTimer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8AC67F82E8F7D4D13C845BD /* Pods_ELKGCDTimer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ELKGCDTimer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D89FFC2B1E145EBEC5C7C0 /* Pods-ELKGCDTimer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ELKGCDTimer_Example.release.xcconfig"; path = "Target Support Files/Pods-ELKGCDTimer_Example/Pods-ELKGCDTimer_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 				C0D2B7A6AF9010B43B613C5B /* Pods-ELKGCDTimer_Tests.debug.xcconfig */,
 				0702F976308EE5FF28D6DDF6 /* Pods-ELKGCDTimer_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MoZhuXuanKe;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = RXW7U2T665;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -513,6 +516,7 @@
 			baseConfigurationReference = EF111859008D44A0421EC054 /* Pods-ELKGCDTimer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RXW7U2T665;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ELKGCDTimer/ELKGCDTimer-Prefix.pch";
 				INFOPLIST_FILE = "ELKGCDTimer/ELKGCDTimer-Info.plist";
@@ -529,6 +533,7 @@
 			baseConfigurationReference = E8D89FFC2B1E145EBEC5C7C0 /* Pods-ELKGCDTimer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RXW7U2T665;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ELKGCDTimer/ELKGCDTimer-Prefix.pch";
 				INFOPLIST_FILE = "ELKGCDTimer/ELKGCDTimer-Info.plist";
