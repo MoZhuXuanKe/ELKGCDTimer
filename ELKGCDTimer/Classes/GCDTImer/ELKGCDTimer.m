@@ -117,7 +117,7 @@ static const double kDefaultIntervalInSeconds = 1.0;
                 NSLog(@"当前定时器配置为无限次,请根据需求手动调用 - killTimer 方法销毁");
             }else{
                 
-                NSLog(@"ELKGCDTImer - repeatCount: %ld",self.repeatCount);
+                NSLog(@"ELKGCDTImer - repeatCount: %ld",(long)self.repeatCount);
             }
         }
     }

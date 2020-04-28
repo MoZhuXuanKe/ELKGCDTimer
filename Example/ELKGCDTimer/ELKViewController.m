@@ -24,7 +24,7 @@
     
     [self.view addSubview:self.numLabel];
     __weak typeof(self) weakSelf = self;
-    self.timer = [ELKGCDTimer elk_easyTimeInterval:1 repeatCount:0 block:^(ELKGCDTimer * _Nonnull timer, NSInteger releaseCount) {
+    self.timer = [ELKGCDTimer elk_easyTimeInterval:1 repeatCount:20 block:^(ELKGCDTimer * _Nonnull timer, NSInteger releaseCount) {
         weakSelf.numLabel.text = [NSString stringWithFormat:@"%ld",releaseCount];
     }];
 }
