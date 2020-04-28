@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'ELKGCDTimer_Example' do
+  pod 'ELKGCDTimer', :path => '../'
+
+  target 'ELKGCDTimer_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
