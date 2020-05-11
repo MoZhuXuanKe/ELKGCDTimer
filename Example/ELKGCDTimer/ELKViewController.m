@@ -7,9 +7,9 @@
 //
 
 #import "ELKViewController.h"
-#import <ELKGCDTimer/ELKGCDTimer-umbrella.h>
+//#import <ELKGCDTimer/ELKGCDTimer-umbrella.h>
 
-
+#import <ELKGCDTimer.h>
 @interface ELKViewController ()
 @property (nonatomic, strong) ELKGCDTimer * timer;
 @property (nonatomic, strong) UILabel * numLabel;
